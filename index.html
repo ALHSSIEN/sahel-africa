@@ -16,8 +16,6 @@
 <header class="topbar">
   <div class="wrap">
     <div class="nav">
-
-      <!-- LOGO -->
       <a class="brand" href="index.html">
         <img src="assets/logo.png" alt="Logo" />
         <div>
@@ -26,20 +24,17 @@
         </div>
       </a>
 
-      <!-- HAMBURGER (Mobile) -->
-      <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+      <button class="burger" id="burgerBtn" type="button" aria-label="Menu">☰</button>
 
-      <!-- MENU -->
       <nav class="menu" id="mainMenu">
         <a class="pill" href="index.html" data-i18n="navHome">Home</a>
         <a class="pill" href="services.html" data-i18n="navServices">Services</a>
         <a class="pill" href="about.html" data-i18n="navAbout">About</a>
         <a class="pill" href="contact.html" data-i18n="navContact">Contact</a>
 
-        <button class="langBtn" id="langToggle">EN</button>
-        <button class="langBtn" id="themeToggle">🌙</button>
+        <button class="langBtn" id="langToggle" type="button">EN</button>
+        <button class="langBtn" id="themeToggle" type="button">🌙</button>
       </nav>
-
     </div>
   </div>
 </header>
@@ -120,43 +115,7 @@
 <!-- ===== SCRIPTS ===== -->
 <script src="assets/script.js"></script>
 
-<script>
-/* ===== HAMBURGER MENU ===== */
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.getElementById("burgerBtn");
-  const menu = document.getElementById("mainMenu");
 
-  if (burger && menu) {
-    burger.addEventListener("click", () => {
-      menu.classList.toggle("open");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !burger.contains(e.target)) {
-        menu.classList.remove("open");
-      }
-    });
-  }
-});
-
-/* ===== DARK MODE ===== */
-(function(){
-  const btn = document.getElementById("themeToggle");
-  const key = "ac_theme";
-  const saved = localStorage.getItem(key) || "light";
-
-  document.documentElement.setAttribute("data-theme", saved);
-  btn.textContent = saved === "dark" ? "☀️" : "🌙";
-
-  btn.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    btn.textContent = next === "dark" ? "☀️" : "🌙";
-    localStorage.setItem(key, next);
-  });
-})();
-</script>
 
 </body>
 </html>

@@ -134,6 +134,26 @@ a{color:inherit}
 .pageTitle h1{margin:0;font-size:28px}
 .breadcrumb{color:var(--muted);font-size:13px;margin-top:6px}
 
+.list{margin:0;padding:0 18px;line-height:2;color:var(--muted)}
+.form{padding:16px}
+.field{display:grid;gap:6px;margin-bottom:10px}
+label{font-weight:800;font-size:13px}
+input, textarea{
+  width:100%;
+  padding:11px 12px;
+  border-radius:14px;
+  border:1px solid rgba(15,23,42,.16);
+  outline:none;
+  font-family:inherit;
+  background:var(--card);
+  color:var(--text);
+}
+input:focus, textarea:focus{
+  border-color:rgba(59,130,246,.45);
+  box-shadow:0 0 0 4px rgba(59,130,246,.12)
+}
+textarea{min-height:120px;resize:vertical}
+
 hr.sep{border:none;border-top:1px solid var(--line);margin:16px 0}
 .footer{padding:18px 0 28px;color:var(--muted)}
 .footerGrid{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
