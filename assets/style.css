@@ -94,6 +94,7 @@ button{font-family:inherit}
   gap:12px;
   min-width:240px;
 }
+.brand img,
 .brand .logo{
   width:46px;height:46px;
   border-radius:16px;
@@ -401,3 +402,8 @@ input:focus, textarea:focus{box-shadow:0 0 0 4px rgba(29,78,216,.15)}
   .grid4{grid-template-columns:1fr}
   .faqGrid{grid-template-columns:1fr}
 }
+
+/* Footer logo sizing */
+.footerBrand{display:flex;align-items:center;gap:12px}
+.footerBrand img{width:44px;height:44px;object-fit:contain;border-radius:14px;background:#fff;padding:8px;border:1px solid rgba(15,23,42,.08)}
+[data-theme="dark"] .footerBrand img{background:rgba(255,255,255,.96)}
