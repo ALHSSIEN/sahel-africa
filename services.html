@@ -2,19 +2,22 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="allServicesTitle">Africa Coast Insurance</title>
-  <meta name="description" content="Africa Coast Insurance | شركة ساحل أفريقيا للتأمين" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="allServicesTitle">كل خدمات التأمين</title>
+  <meta name="description" content="Africa Coast Insurance services" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/i18n.js"></script>
 </head>
+
 <body>
+
+<!-- ============ NAV ============ -->
 <header class="topbar">
-  <div class="wrap">
+  <div class="container">
     <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Logo" />
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/logo.png" alt="Africa Coast Insurance" />
         <div>
           <div class="name" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
           <div class="tag" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
@@ -23,97 +26,149 @@
 
       <button class="burger" id="burgerBtn" type="button" aria-label="Menu">☰</button>
 
-      <nav class="menu" id="mainMenu">
-        <a class="pill" href="index.html" data-i18n="navHome">Home</a>
-        <a class="pill" href="services.html" data-i18n="navServices">Services</a>
-        <a class="pill" href="about.html" data-i18n="navAbout">About</a>
-        <a class="pill" href="contact.html" data-i18n="navContact">Contact</a>
+      <nav class="menu" id="mainMenu" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="services.html" data-i18n="navServices">الخدمات</a>
+        <a href="about.html" data-i18n="navAbout">من نحن</a>
+        <a href="contact.html" data-i18n="navContact">تواصل</a>
 
-        <button class="langBtn" id="langToggle" type="button">EN</button>
-        <button class="langBtn" id="themeToggle" type="button">🌙</button>
+        <div class="navActions">
+          <button class="iconBtn" id="langToggle" type="button" aria-label="Language">EN</button>
+          <button class="iconBtn" id="themeToggle" type="button" aria-label="Theme">🌙</button>
+        </div>
       </nav>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-  <div class="pageTitle">
-    <h1 data-i18n="allServicesTitle">All Insurance Services</h1>
-    <div class="breadcrumb"><a href="index.html" data-i18n="crumbsHome">Home</a> / <span data-i18n="crumbsServices">Services</span></div>
-    <p class="muted" data-i18n="allServicesSub" style="margin-top:10px">Dedicated pages for each product with coverage highlights and common uses.</p>
-  </div>
-
+<main>
   <section class="section">
-    <div class="grid3">
-      <div class="card tile">
-      <h3 data-i18n="serviceMotor">...</h3>
-      <p class="muted">Motor insurance for cars &amp; fleets.</p>
-      <a href="services/motor.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceMedical">...</h3>
-      <p class="muted">Medical plans for individuals and families.</p>
-      <a href="services/medical.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceProperty">...</h3>
-      <p class="muted">Homes, offices, warehouses.</p>
-      <a href="services/property.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceMarine">...</h3>
-      <p class="muted">Marine cargo &amp; hull coverage.</p>
-      <a href="services/marine.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceTravel">...</h3>
-      <p class="muted">Travel coverage and assistance.</p>
-      <a href="services/travel.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceLife">...</h3>
-      <p class="muted">Life &amp; personal protection.</p>
-      <a href="services/life.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceBusiness">...</h3>
-      <p class="muted">Business insurance tailored to your activity.</p>
-      <a href="services/business.html" data-i18n="readMore">Details</a>
-    </div>
-<div class="card tile">
-      <h3 data-i18n="serviceLiability">...</h3>
-      <p class="muted">Public/professional liability cover.</p>
-      <a href="services/liability.html" data-i18n="readMore">Details</a>
-    </div>
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <div class="kicker">Services</div>
+          <h2 class="sectionTitle" data-i18n="allServicesTitle">كل خدمات التأمين</h2>
+          <p class="sectionSub" data-i18n="allServicesSub">صفحات مفصلة لكل منتج لتوضيح التغطيات والاستخدامات الشائعة.</p>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <a class="card" href="services/motor.html">
+          <div class="pad">
+            <div class="chip">Motor</div>
+            <h3 class="cardTitle" data-i18n="serviceMotor">تأمين السيارات</h3>
+            <p class="cardText">تغطيات للسيارات الخاصة والتجارية مع خيارات إضافية.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/medical.html">
+          <div class="pad">
+            <div class="chip">Medical</div>
+            <h3 class="cardTitle" data-i18n="serviceMedical">التأمين الصحي</h3>
+            <p class="cardText">خيارات للشركات والأفراد حسب الشبكات والحدود.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/property.html">
+          <div class="pad">
+            <div class="chip">Property</div>
+            <h3 class="cardTitle" data-i18n="serviceProperty">تأمين الممتلكات</h3>
+            <p class="cardText">حماية المباني والمحتويات ضد المخاطر المحتملة.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/marine.html">
+          <div class="pad">
+            <div class="chip">Marine</div>
+            <h3 class="cardTitle" data-i18n="serviceMarine">التأمين البحري</h3>
+            <p class="cardText">تغطية للبضائع والشحن حسب نوع الرحلة والحمولة.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="grid4">
+        <a class="card" href="services/travel.html">
+          <div class="pad">
+            <div class="chip">Travel</div>
+            <h3 class="cardTitle" data-i18n="serviceTravel">تأمين السفر</h3>
+            <p class="cardText">مزايا طبية وحوادث وتأخير حسب الوجهة والمدة.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/life.html">
+          <div class="pad">
+            <div class="chip">Life</div>
+            <h3 class="cardTitle" data-i18n="serviceLife">تأمين الحياة</h3>
+            <p class="cardText">خيارات حماية مستقبل العائلة مع مزايا حسب الخطة.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/business.html">
+          <div class="pad">
+            <div class="chip">Business</div>
+            <h3 class="cardTitle" data-i18n="serviceBusiness">تأمين الشركات</h3>
+            <p class="cardText">حلول للمنشآت والمشاريع مع تغطيات متخصصة.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+        <a class="card" href="services/liability.html">
+          <div class="pad">
+            <div class="chip">Liability</div>
+            <h3 class="cardTitle" data-i18n="serviceLiability">تأمين المسؤولية</h3>
+            <p class="cardText">حماية ضد مطالبات الغير والمسؤوليات القانونية.</p>
+            <div class="muted" data-i18n="readMore">تفاصيل</div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="card pad">
-      <h2 class="h2" data-i18n="getInTouch">Contact us for coverage details.</h2>
-      <p class="muted" style="line-height:2">طرابلس - حي الأندلس - مقابل مجمع سنتر الواحات<br/>+218-217179999 · info@AfricaCoast.ly</p>
-      <a class="btn primary" href="contact.html" data-i18n="navContact">Contact</a>
+    <div class="container">
+      <div class="cta">
+        <div class="ctaInner">
+          <div>
+            <h3 class="ctaTitle" data-i18n="ctaTitle">جاهزين نساعدوك في اختيار التغطية المناسبة</h3>
+            <p class="ctaText" data-i18n="ctaSub">اتصل بينا أو أرسل طلبك، وخلال وقت قصير يصلك الرد.</p>
+          </div>
+          <div class="ctaActions">
+            <a class="btn primary" href="contact.html" data-i18n="ctaBtnContact">تواصل معنا</a>
+            <a class="btn ghost" href="tel:+218217179999" data-i18n="heroBtnCall">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="wrap">
-    <hr class="sep" />
+  <div class="container">
     <div class="footerGrid">
-      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <img src="assets/logo-text.png" alt="Logo" style="height:38px; background:#fff; padding:6px; border-radius:12px; border:1px solid rgba(15,23,42,.10);" />
-        <div>
-          <div style="font-weight:900; color:#0f172a" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
-          <div class="muted" style="font-size:12px">+218-217179999 · info@AfricaCoast.ly</div>
+      <div>
+        <div class="footerBrand">
+          <img src="assets/logo.png" alt="" />
+          <div>
+            <strong data-i18n="siteName">شركة ساحل أفريقيا للتأمين</strong>
+            <div class="muted" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
+          </div>
+        </div>
+        <div class="footerLinks">
+          <a href="tel:+218217179999">+218-217179999</a>
+          <a href="mailto:info@AfricaCoast.ly">info@AfricaCoast.ly</a>
         </div>
       </div>
-      <div class="muted" style="font-size:12px">
-        © <span data-year></span> <span data-i18n="footerRights">All rights reserved</span>
+      <div>
+        <div class="muted">طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات</div>
+        <div class="muted">© <span data-year></span> <span data-i18n="footerRights">جميع الحقوق محفوظة</span></div>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>

@@ -2,19 +2,22 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="contactTitle">Africa Coast Insurance</title>
-  <meta name="description" content="Africa Coast Insurance | شركة ساحل أفريقيا للتأمين" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="contactTitle">تواصل معنا</title>
+  <meta name="description" content="Contact Africa Coast Insurance" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/i18n.js"></script>
 </head>
+
 <body>
+
+<!-- ============ NAV ============ -->
 <header class="topbar">
-  <div class="wrap">
+  <div class="container">
     <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Logo" />
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/logo.png" alt="Africa Coast Insurance" />
         <div>
           <div class="name" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
           <div class="tag" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
@@ -23,95 +26,126 @@
 
       <button class="burger" id="burgerBtn" type="button" aria-label="Menu">☰</button>
 
-      <nav class="menu" id="mainMenu">
-        <a class="pill" href="index.html" data-i18n="navHome">Home</a>
-        <a class="pill" href="services.html" data-i18n="navServices">Services</a>
-        <a class="pill" href="about.html" data-i18n="navAbout">About</a>
-        <a class="pill" href="contact.html" data-i18n="navContact">Contact</a>
+      <nav class="menu" id="mainMenu" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="services.html" data-i18n="navServices">الخدمات</a>
+        <a href="about.html" data-i18n="navAbout">من نحن</a>
+        <a href="contact.html" data-i18n="navContact">تواصل</a>
 
-        <button class="langBtn" id="langToggle" type="button">EN</button>
-        <button class="langBtn" id="themeToggle" type="button">🌙</button>
+        <div class="navActions">
+          <button class="iconBtn" id="langToggle" type="button" aria-label="Language">EN</button>
+          <button class="iconBtn" id="themeToggle" type="button" aria-label="Theme">🌙</button>
+        </div>
       </nav>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-  <div class="pageTitle">
-    <h1 data-i18n="contactTitle">Contact Us</h1>
-    <div class="breadcrumb"><a href="index.html" data-i18n="crumbsHome">Home</a> / <span data-i18n="crumbsContact">Contact</span></div>
-    <p class="muted" data-i18n="contactSub" style="margin-top:10px">We’re happy to respond to your inquiries during business hours.</p>
-  </div>
+<main>
 
   <section class="section">
-    <div class="grid2">
-      <div class="card pad">
-        <h2 class="h2" data-i18n="contactTitle">Contact Us</h2>
-        <p class="muted" style="line-height:2">
-          <b data-i18n="phoneLabel">Phone</b>: +218-217179999<br/>
-          <b data-i18n="emailLabel">Email</b>: info@AfricaCoast.ly<br/>
-          <b data-i18n="postalLabel">Postal Code</b>: 11.04.094<br/>
-          <b data-i18n="addressLabel">Address</b>: طرابلس - حي الأندلس - مقابل مجمع سنتر الواحات<br/>
-          <span class="muted">Tripoli – Al-Andalus District – Opposite Center Al-Wahat Complex</span>
-        </p>
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2 class="sectionTitle" data-i18n="contactTitle">تواصل معنا</h2>
+          <p class="sectionSub" data-i18n="contactSub">يسعدنا الرد على استفساراتكم خلال أوقات العمل.</p>
+        </div>
       </div>
 
-      <div class="card form">
-        <h2 class="h2" data-i18n="formTitle">Send a message</h2>
-        <form id="mailForm">
-          <div class="field">
-            <label data-i18n="nameLabel">Name</label>
-            <input name="name" required />
+      <div class="contactGrid">
+        <div class="card">
+          <div class="pad">
+            <h3 class="cardTitle" data-i18n="formTitle">أرسل رسالة</h3>
+            <p class="cardText muted" data-i18n="sendNote">ملاحظة: زر الإرسال يفتح بريدك الافتراضي (بدون سيرفر).</p>
+
+            <form id="contactForm" data-to="info@AfricaCoast.ly" aria-label="Contact form">
+              <div class="field">
+                <label for="fName" data-i18n="nameLabel">الاسم</label>
+                <input id="fName" name="name" type="text" placeholder="..." autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="fSubject" data-i18n="subjectLabel">الموضوع</label>
+                <input id="fSubject" name="subject" type="text" placeholder="..." />
+              </div>
+              <div class="field">
+                <label for="fMessage" data-i18n="messageLabel">الرسالة</label>
+                <textarea id="fMessage" name="message" rows="6" placeholder="..."></textarea>
+              </div>
+
+              <div class="btnRow" id="quote">
+                <button class="btn primary" type="submit" data-i18n="sendEmail">إرسال عبر البريد</button>
+                <a class="btn ghost" href="tel:+218217179999" data-i18n="heroBtnCall">اتصل الآن</a>
+              </div>
+            </form>
           </div>
-          <div class="field">
-            <label data-i18n="subjectLabel">Subject</label>
-            <input name="subject" required />
+        </div>
+
+        <div>
+          <div class="grid2">
+            <div class="card">
+              <div class="pad">
+                <div class="chip" data-i18n="phoneLabel">الهاتف</div>
+                <a class="cardTitle" href="tel:+218217179999">+218-217179999</a>
+                <div class="muted" data-i18n="hoursLabel">ساعات العمل</div>
+                <div class="cardText" data-i18n="hoursText">الأحد – الخميس: 09:00 – 17:00</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="pad">
+                <div class="chip" data-i18n="emailLabel">الإيميل</div>
+                <a class="cardTitle" href="mailto:info@AfricaCoast.ly">info@AfricaCoast.ly</a>
+                <div class="muted" data-i18n="postalLabel">الرمز البريدي</div>
+                <div class="cardText">11.04.094</div>
+              </div>
+            </div>
           </div>
-          <div class="field">
-            <label data-i18n="messageLabel">Message</label>
-            <textarea name="message" required></textarea>
+
+          <div class="spacer"></div>
+
+          <div class="card">
+            <div class="pad">
+              <div class="chip" data-i18n="addressLabel">العنوان</div>
+              <div class="cardTitle">طرابلس – حي الأندلس</div>
+              <div class="cardText muted">مقابل مجمع سنتر الواحات</div>
+              <div class="btnRow" style="margin-top:12px;">
+                <a class="btn small" href="https://www.google.com/maps/search/?api=1&query=%D8%AD%D9%8A%20%D8%A7%D9%84%D8%A3%D9%86%D8%AF%D9%84%D8%B3%20%D8%B7%D8%B1%D8%A7%D8%A8%D9%84%D8%B3%20%D9%85%D8%AC%D9%85%D8%B9%20%D8%B3%D9%86%D8%AA%D8%B1%20%D8%A7%D9%84%D9%88%D8%A7%D8%AD%D8%A7%D8%AA" target="_blank" rel="noopener">فتح على الخريطة</a>
+                <a class="btn small ghost" href="services.html">الخدمات</a>
+              </div>
+            </div>
           </div>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="muted" style="margin:10px 0 0" data-i18n="sendNote">Note: The send button opens your default email app (no server required).</p>
-        </form>
+        </div>
       </div>
     </div>
   </section>
-</main>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("mailForm");
-  if (!form) return;
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const n = data.get("name");
-    const subject = data.get("subject");
-    const message = data.get("message");
-    const body = encodeURIComponent(`Name: ${n}\n\nMessage:\n${message}\n\nPhone: +218-217179999`);
-    const sub = encodeURIComponent(subject);
-    window.location.href = `mailto:info@AfricaCoast.ly?subject=${sub}&body=${body}`;
-  });
-});
-</script>
 
+</main>
+
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="wrap">
-    <hr class="sep" />
+  <div class="container">
     <div class="footerGrid">
-      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <img src="assets/logo-text.png" alt="Logo" style="height:38px; background:#fff; padding:6px; border-radius:12px; border:1px solid rgba(15,23,42,.10);" />
-        <div>
-          <div style="font-weight:900; color:#0f172a" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
-          <div class="muted" style="font-size:12px">+218-217179999 · info@AfricaCoast.ly</div>
+      <div>
+        <div class="footerBrand">
+          <img src="assets/logo.png" alt="" />
+          <div>
+            <strong data-i18n="siteName">شركة ساحل أفريقيا للتأمين</strong>
+            <div class="muted" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
+          </div>
+        </div>
+        <div class="footerLinks">
+          <a href="tel:+218217179999">+218-217179999</a>
+          <a href="mailto:info@AfricaCoast.ly">info@AfricaCoast.ly</a>
         </div>
       </div>
-      <div class="muted" style="font-size:12px">
-        © <span data-year></span> <span data-i18n="footerRights">All rights reserved</span>
+      <div>
+        <div class="muted">طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات</div>
+        <div class="muted">© <span data-year></span> <span data-i18n="footerRights">جميع الحقوق محفوظة</span></div>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>

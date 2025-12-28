@@ -2,9 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="siteName">شركة ساحل أفريقيا للتأمين</title>
-  <meta name="description" content="شركة ساحل أفريقيا للتأمين" />
+  <meta name="description" content="Africa Coast Insurance | شركة ساحل أفريقيا للتأمين" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/i18n.js"></script>
@@ -12,67 +12,265 @@
 
 <body>
 
+<!-- ============ NAV ============ -->
 <header class="topbar">
-  <div class="wrap">
+  <div class="container">
     <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Logo" />
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/logo.png" alt="Africa Coast Insurance" />
         <div>
           <div class="name" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
           <div class="tag" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
         </div>
       </a>
 
-      <button class="burger" id="burgerBtn">☰</button>
+      <button class="burger" id="burgerBtn" type="button" aria-label="Menu">☰</button>
 
-      <nav class="menu" id="mainMenu">
-        <a class="pill" href="index.html" data-i18n="navHome">الرئيسية</a>
-        <a class="pill" href="services.html" data-i18n="navServices">الخدمات</a>
-        <a class="pill" href="about.html" data-i18n="navAbout">من نحن</a>
-        <a class="pill" href="contact.html" data-i18n="navContact">تواصل</a>
-        <button class="langBtn" id="langToggle">EN</button>
-        <button class="langBtn" id="themeToggle">🌙</button>
+      <nav class="menu" id="mainMenu" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="services.html" data-i18n="navServices">الخدمات</a>
+        <a href="about.html" data-i18n="navAbout">من نحن</a>
+        <a href="contact.html" data-i18n="navContact">تواصل</a>
+
+        <div class="navActions">
+          <button class="iconBtn" id="langToggle" type="button" aria-label="Language">EN</button>
+          <button class="iconBtn" id="themeToggle" type="button" aria-label="Theme">🌙</button>
+        </div>
       </nav>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="heroBox">
-      <div class="heroGrid">
-        <div>
-          <div class="badge">شركة ساحل أفريقيا للتأمين</div>
-          <h1>تأمين موثوق للأفراد والشركات</h1>
-          <p>نقدم خدمات تأمينية شاملة مع الالتزام بالجودة والشفافية وسرعة الخدمة.</p>
-        </div>
+<main>
 
-        <div class="card pad">
-          <strong>تواصل معنا</strong>
-          <p class="muted">
-            الهاتف: +218-217179999<br>
-            الإيميل: info@AfricaCoast.ly<br>
-            الرمز البريدي: 11.04.094
-          </p>
-          <p class="muted">
-            طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات
-          </p>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="heroCard">
+        <div class="heroGrid">
+          <div>
+            <div class="badge" data-i18n="heroBadge">تغطيات متكاملة · دعم سريع · شفافية</div>
+            <h1 data-i18n="heroTitle">تأمين حديث يليق بشركة عالمية</h1>
+            <p class="lead" data-i18n="heroSub">حلول تأمينية للأفراد والشركات — مع تجربة رقمية أبسط، متابعة أوضح، وخدمة أسرع.</p>
+
+            <div class="btnRow">
+              <a class="btn primary" href="contact.html#quote" data-i18n="heroBtnQuote">اطلب عرض سعر</a>
+              <a class="btn ghost" href="tel:+218217179999" data-i18n="heroBtnCall">اتصل الآن</a>
+            </div>
+
+            <div class="trustRow" aria-label="Highlights">
+              <div class="trustItem">
+                <span class="dot"></span>
+                <span data-i18n="trust1">إدارة مطالبات منظمة</span>
+              </div>
+              <div class="trustItem">
+                <span class="dot"></span>
+                <span data-i18n="trust2">خيارات مرنة للتغطية</span>
+              </div>
+              <div class="trustItem">
+                <span class="dot"></span>
+                <span data-i18n="trust3">قنوات تواصل متعددة</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="heroAside">
+            <div class="panel">
+              <div class="panelTitle">Africa Coast Insurance</div>
+              <div class="panelText">
+                <div class="kv"><span>+218-217179999</span><small data-i18n="phoneLabel">الهاتف</small></div>
+                <div class="kv"><span>info@AfricaCoast.ly</span><small data-i18n="emailLabel">الإيميل</small></div>
+                <div class="kv"><span>11.04.094</span><small data-i18n="postalLabel">الرمز البريدي</small></div>
+                <div class="kv"><span>طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات</span><small data-i18n="addressLabel">العنوان</small></div>
+              </div>
+              <a class="btn small" href="contact.html" data-i18n="ctaBtnContact">تواصل معنا</a>
+            </div>
+
+            <div class="glassCard">
+              <div class="miniTitle" data-i18n="sectionStats">مؤشرات ثقة</div>
+              <div class="miniGrid">
+                <div class="miniStat"><strong>—</strong><span data-i18n="stat1">فروع / نقاط خدمة</span></div>
+                <div class="miniStat"><strong>—</strong><span data-i18n="stat2">حلول للأفراد</span></div>
+                <div class="miniStat"><strong>—</strong><span data-i18n="stat3">حلول للشركات</span></div>
+                <div class="miniStat"><strong>—</strong><span data-i18n="stat4">دعم على مدار ساعات العمل</span></div>
+              </div>
+              <div class="note" data-i18n="statNote">* الأرقام قابلة للتحديث حسب بيانات الشركة.</div>
+            </div>
+          </aside>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ============ SERVICES PREVIEW ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2 data-i18n="sectionServices">خدماتنا</h2>
+          <p class="muted" data-i18n="sectionServicesSub">نغطي احتياجات التأمين الأساسية للأفراد والقطاعات المختلفة.</p>
+        </div>
+        <a class="link" href="services.html" data-i18n="viewAllServices">عرض كل الخدمات</a>
+      </div>
+
+      <div class="grid4">
+        <a class="serviceCard" href="services/motor.html">
+          <div class="icon">🚗</div>
+          <div class="serviceTitle" data-i18n="serviceMotor">تأمين السيارات</div>
+          <div class="serviceText">TPO / شامل / حوادث</div>
+        </a>
+        <a class="serviceCard" href="services/medical.html">
+          <div class="icon">🩺</div>
+          <div class="serviceTitle" data-i18n="serviceMedical">التأمين الصحي</div>
+          <div class="serviceText">أفراد / شركات / شبكات</div>
+        </a>
+        <a class="serviceCard" href="services/property.html">
+          <div class="icon">🏢</div>
+          <div class="serviceTitle" data-i18n="serviceProperty">تأمين الممتلكات</div>
+          <div class="serviceText">حريق / سرقة / أخطار</div>
+        </a>
+        <a class="serviceCard" href="services/travel.html">
+          <div class="icon">✈️</div>
+          <div class="serviceTitle" data-i18n="serviceTravel">تأمين السفر</div>
+          <div class="serviceText">طوارئ / تأخير / أمتعة</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="section alt">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2 data-i18n="sectionWhy">لماذا ساحل أفريقيا؟</h2>
+          <p class="muted">نرتّب الخدمة على شكل تجربة واضحة — من الطلب إلى المطالبة.</p>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <div class="featureCard">
+          <div class="featureTop"><span class="chip" data-i18n="whyCard1Title">استجابة سريعة</span></div>
+          <p class="muted" data-i18n="whyCard1Text">نتابع الطلبات والمطالبات بخطوات واضحة حتى إغلاقها.</p>
+        </div>
+        <div class="featureCard">
+          <div class="featureTop"><span class="chip" data-i18n="whyCard2Title">شفافية</span></div>
+          <p class="muted" data-i18n="whyCard2Text">معلومات واضحة عن التغطية، الاستثناءات، والمتطلبات.</p>
+        </div>
+        <div class="featureCard">
+          <div class="featureTop"><span class="chip" data-i18n="whyCard3Title">حلول للأعمال</span></div>
+          <p class="muted" data-i18n="whyCard3Text">برامج تأمين للشركات والمشاريع مع خيارات توسّع.</p>
+        </div>
+        <div class="featureCard">
+          <div class="featureTop"><span class="chip" data-i18n="whyCard4Title">تجربة رقمية</span></div>
+          <p class="muted" data-i18n="whyCard4Text">نماذج مختصرة، تواصل سريع، وصفحات تعريف دقيقة بالخدمات.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2 data-i18n="sectionProcess">كيف نشتغل؟</h2>
+          <p class="muted">أربع خطوات بسيطة من أول تواصل إلى الدعم وقت المطالبة.</p>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <div class="stepCard">
+          <div class="stepNum">1</div>
+          <div class="stepTitle" data-i18n="step1Title">تحديد احتياجك</div>
+          <p class="muted" data-i18n="step1Text">اختر نوع التأمين وشاركنا التفاصيل الأساسية.</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">2</div>
+          <div class="stepTitle" data-i18n="step2Title">عرض سعر واضح</div>
+          <p class="muted" data-i18n="step2Text">نقدّم عرض سعر وتغطية مناسبة حسب احتياجك.</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">3</div>
+          <div class="stepTitle" data-i18n="step3Title">إصدار الوثيقة</div>
+          <p class="muted" data-i18n="step3Text">إجراءات مبسطة وإصدار سريع مع متابعة.</p>
+        </div>
+        <div class="stepCard">
+          <div class="stepNum">4</div>
+          <div class="stepTitle" data-i18n="step4Title">مساعدة عند الحاجة</div>
+          <p class="muted" data-i18n="step4Text">نقف معك وقت المطالبة بخطوات منظمة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="container">
+      <div class="ctaCard">
+        <div class="ctaInner">
+          <div>
+            <h3 data-i18n="ctaTitle">جاهزين نساعدوك في اختيار التغطية المناسبة</h3>
+            <p class="muted" data-i18n="ctaSub">اتصل بينا أو أرسل طلبك، وخلال وقت قصير يصلك الرد.</p>
+          </div>
+          <div class="ctaBtns">
+            <a class="btn primary" href="contact.html" data-i18n="ctaBtnContact">تواصل معنا</a>
+            <a class="btn" href="https://wa.me/218217179999" target="_blank" rel="noreferrer" data-i18n="ctaBtnWhats">واتساب (اختياري)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section alt">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2 data-i18n="faqTitle">أسئلة شائعة</h2>
+          <p class="muted">إجابات سريعة لأكثر الأسئلة تكراراً.</p>
+        </div>
+      </div>
+
+      <div class="faqGrid">
+        <details class="faq">
+          <summary data-i18n="faq1Q">شنو المستندات المطلوبة؟</summary>
+          <div class="muted" data-i18n="faq1A">تختلف حسب نوع التأمين، لكن غالباً: هوية/سجل، بيانات الأصل (سيارة/عقار)، وأي مستندات داعمة.</div>
+        </details>
+        <details class="faq">
+          <summary data-i18n="faq2Q">كم يستغرق إصدار الوثيقة؟</summary>
+          <div class="muted" data-i18n="faq2A">بعد اكتمال البيانات والموافقة على العرض، نحاول إصدار الوثيقة في أقرب وقت ممكن حسب نوع المنتج.</div>
+        </details>
+        <details class="faq">
+          <summary data-i18n="faq3Q">كيف نبدأ مطالبة؟</summary>
+          <div class="muted" data-i18n="faq3A">تواصل معنا عبر الهاتف أو الإيميل، ونعطيك قائمة المتطلبات وخطوات المتابعة.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="wrap">
-    <hr class="sep" />
+  <div class="container">
     <div class="footerGrid">
       <div>
-        <strong>شركة ساحل أفريقيا للتأمين</strong><br>
-        +218-217179999 · info@AfricaCoast.ly
+        <div class="footerBrand">
+          <img src="assets/logo.png" alt="" />
+          <div>
+            <strong data-i18n="siteName">شركة ساحل أفريقيا للتأمين</strong>
+            <div class="muted" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
+          </div>
+        </div>
+        <div class="footerLinks">
+          <a href="tel:+218217179999">+218-217179999</a>
+          <a href="mailto:info@AfricaCoast.ly">info@AfricaCoast.ly</a>
+        </div>
       </div>
       <div>
-        © <span data-year></span> جميع الحقوق محفوظة
+        <div class="muted">طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات</div>
+        <div class="muted">© <span data-year></span> <span data-i18n="footerRights">جميع الحقوق محفوظة</span></div>
       </div>
     </div>
   </div>

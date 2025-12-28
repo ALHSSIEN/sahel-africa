@@ -2,19 +2,20 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="aboutTitle">Africa Coast Insurance</title>
-  <meta name="description" content="Africa Coast Insurance | شركة ساحل أفريقيا للتأمين" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="aboutTitle">من نحن</title>
+  <meta name="description" content="About Africa Coast Insurance" />
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script src="assets/i18n.js"></script>
 </head>
 <body>
+
 <header class="topbar">
-  <div class="wrap">
+  <div class="container">
     <div class="nav">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Logo" />
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/logo.png" alt="Africa Coast Insurance" />
         <div>
           <div class="name" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
           <div class="tag" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
@@ -23,63 +24,126 @@
 
       <button class="burger" id="burgerBtn" type="button" aria-label="Menu">☰</button>
 
-      <nav class="menu" id="mainMenu">
-        <a class="pill" href="index.html" data-i18n="navHome">Home</a>
-        <a class="pill" href="services.html" data-i18n="navServices">Services</a>
-        <a class="pill" href="about.html" data-i18n="navAbout">About</a>
-        <a class="pill" href="contact.html" data-i18n="navContact">Contact</a>
+      <nav class="menu" id="mainMenu" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="services.html" data-i18n="navServices">الخدمات</a>
+        <a href="about.html" data-i18n="navAbout">من نحن</a>
+        <a href="contact.html" data-i18n="navContact">تواصل</a>
 
-        <button class="langBtn" id="langToggle" type="button">EN</button>
-        <button class="langBtn" id="themeToggle" type="button">🌙</button>
+        <div class="navActions">
+          <button class="iconBtn" id="langToggle" type="button" aria-label="Language">EN</button>
+          <button class="iconBtn" id="themeToggle" type="button" aria-label="Theme">🌙</button>
+        </div>
       </nav>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-  <div class="pageTitle">
-    <h1 data-i18n="aboutTitle">About Us</h1>
-    <div class="breadcrumb"><a href="index.html" data-i18n="crumbsHome">Home</a> / <span data-i18n="crumbsAbout">About</span></div>
-  </div>
-
-  <section class="section">
-    <div class="card pad">
-      <div class="grid2" style="align-items:center">
+<main>
+  <section class="pageHero">
+    <div class="container">
+      <div class="pageHeroInner">
         <div>
-          <h2 class="h2" data-i18n="siteName">Africa Coast Insurance</h2>
-          <p class="muted" style="line-height:2" data-i18n="aboutText">Africa Coast Insurance provides insurance services...</p>
-          <div class="kpis" style="margin-top:10px">
-            <div class="card kpi"><b>+218-217179999</b><span data-i18n="phoneLabel">Phone</span></div>
-            <div class="card kpi"><b>info@AfricaCoast.ly</b><span data-i18n="emailLabel">Email</span></div>
-            <div class="card kpi"><b>11.04.094</b><span data-i18n="postalLabel">Postal Code</span></div>
-          </div>
+          <div class="kicker" data-i18n="aboutTitle">من نحن</div>
+          <h1 data-i18n="aboutLead">نؤمن أن التأمين تجربة: وضوح، سرعة، واهتمام.</h1>
+          <p class="lead" data-i18n="aboutText1">شركة ساحل أفريقيا للتأمين تقدم خدمات تأمينية للأفراد والشركات، بهدف حماية الأصول وتسهيل الوصول إلى التغطية المناسبة عبر إجراءات واضحة.</p>
+          <p class="muted" data-i18n="aboutText2">نعمل على تطوير القنوات الرقمية وخدمة العملاء، مع الالتزام بالجودة والشفافية وخصوصية البيانات.</p>
         </div>
-        <div class="card pad" style="text-align:center">
-          <img src="assets/logo-text.png" alt="Logo" style="max-width:100%; height:120px; object-fit:contain" />
-          <p class="muted" style="margin:10px 0 0">طرابلس - حي الأندلس - مقابل مجمع سنتر الواحات<br/>Tripoli – Al-Andalus District – Opposite Center Al-Wahat Complex</p>
+
+        <div class="card pad" aria-label="Quick facts">
+          <div class="h3" data-i18n="sectionStats">مؤشرات ثقة</div>
+          <div class="statsGrid">
+            <div class="stat">
+              <div class="statNum">—</div>
+              <div class="muted" data-i18n="stat1">فروع / نقاط خدمة</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">—</div>
+              <div class="muted" data-i18n="stat2">حلول للأفراد</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">—</div>
+              <div class="muted" data-i18n="stat3">حلول للشركات</div>
+            </div>
+            <div class="stat">
+              <div class="statNum">—</div>
+              <div class="muted" data-i18n="stat4">دعم على مدار ساعات العمل</div>
+            </div>
+          </div>
+          <div class="tiny muted" data-i18n="statNote">* الأرقام قابلة للتحديث حسب بيانات الشركة.</div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid3">
+        <div class="card pad">
+          <div class="h3" data-i18n="missionTitle">رسالتنا</div>
+          <p class="muted" data-i18n="missionText">تقديم حلول تأمينية موثوقة وسهلة الوصول، مع تجربة عميل مميزة.</p>
+        </div>
+        <div class="card pad">
+          <div class="h3" data-i18n="visionTitle">رؤيتنا</div>
+          <p class="muted" data-i18n="visionText">أن نكون خياراً أولاً في التأمين عبر خدمات حديثة وثقة طويلة الأمد.</p>
+        </div>
+        <div class="card pad">
+          <div class="h3" data-i18n="valuesTitle">قيمنا</div>
+          <div class="chips">
+            <span class="chip" data-i18n="value1">الشفافية</span>
+            <span class="chip" data-i18n="value2">الالتزام</span>
+            <span class="chip" data-i18n="value3">سرعة الاستجابة</span>
+            <span class="chip" data-i18n="value4">التحسين المستمر</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <div class="ctaInner">
+          <div>
+            <div class="kicker">Africa Coast Insurance</div>
+            <div class="h2" data-i18n="ctaTitle">جاهزين نساعدوك في اختيار التغطية المناسبة</div>
+            <p class="muted" data-i18n="ctaSub">اتصل بينا أو أرسل طلبك، وخلال وقت قصير يصلك الرد.</p>
+          </div>
+          <div class="btnRow">
+            <a class="btn primary" href="contact.html" data-i18n="ctaBtnContact">تواصل معنا</a>
+            <a class="btn ghost" href="services.html" data-i18n="viewAllServices">عرض كل الخدمات</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
-  <div class="wrap">
-    <hr class="sep" />
+  <div class="container">
     <div class="footerGrid">
-      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <img src="assets/logo-text.png" alt="Logo" style="height:38px; background:#fff; padding:6px; border-radius:12px; border:1px solid rgba(15,23,42,.10);" />
-        <div>
-          <div style="font-weight:900; color:#0f172a" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
-          <div class="muted" style="font-size:12px">+218-217179999 · info@AfricaCoast.ly</div>
+      <div>
+        <div class="footerBrand">
+          <img src="assets/logo.png" alt="" />
+          <div>
+            <strong data-i18n="siteName">شركة ساحل أفريقيا للتأمين</strong>
+            <div class="muted" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
+          </div>
+        </div>
+        <div class="footerLinks">
+          <a href="tel:+218217179999">+218-217179999</a>
+          <a href="mailto:info@AfricaCoast.ly">info@AfricaCoast.ly</a>
         </div>
       </div>
-      <div class="muted" style="font-size:12px">
-        © <span data-year></span> <span data-i18n="footerRights">All rights reserved</span>
+      <div>
+        <div class="muted">طرابلس – حي الأندلس – مقابل مجمع سنتر الواحات</div>
+        <div class="muted">© <span data-year></span> <span data-i18n="footerRights">جميع الحقوق محفوظة</span></div>
       </div>
     </div>
   </div>
 </footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>
