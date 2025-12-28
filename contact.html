@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="contactTitle">Africa Coast Insurance</title>
+  <meta name="description" content="Africa Coast Insurance | شركة ساحل أفريقيا للتأمين" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/i18n.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo" />
+        <div>
+          <div class="name" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
+          <div class="tag" data-i18n="siteTag">حلول تأمينية للأفراد والشركات</div>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a class="pill" href="index.html" data-i18n="navHome">Home</a>
+        <a class="pill" href="services.html" data-i18n="navServices">Services</a>
+        <a class="pill" href="about.html" data-i18n="navAbout">About</a>
+        <a class="pill" href="contact.html" data-i18n="navContact">Contact</a>
+        <button class="langBtn" id="langToggle" type="button">EN</button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pageTitle">
+    <h1 data-i18n="contactTitle">Contact Us</h1>
+    <div class="breadcrumb"><a href="index.html" data-i18n="crumbsHome">Home</a> / <span data-i18n="crumbsContact">Contact</span></div>
+    <p class="muted" data-i18n="contactSub" style="margin-top:10px">We’re happy to respond to your inquiries during business hours.</p>
+  </div>
+
+  <section class="section">
+    <div class="grid2">
+      <div class="card pad">
+        <h2 class="h2" data-i18n="contactTitle">Contact Us</h2>
+        <p class="muted" style="line-height:2">
+          <b data-i18n="phoneLabel">Phone</b>: +218-217179999<br/>
+          <b data-i18n="emailLabel">Email</b>: info@AfricaCoast.ly<br/>
+          <b data-i18n="postalLabel">Postal Code</b>: 11.04.094<br/>
+          <b data-i18n="addressLabel">Address</b>: طرابلس - حي الأندلس - مقابل مجمع سنتر الواحات<br/>
+          <span class="muted">Tripoli – Al-Andalus District – Opposite Center Al-Wahat Complex</span>
+        </p>
+      </div>
+
+      <div class="card form">
+        <h2 class="h2" data-i18n="formTitle">Send a message</h2>
+        <form id="mailForm">
+          <div class="field">
+            <label data-i18n="nameLabel">Name</label>
+            <input name="name" required />
+          </div>
+          <div class="field">
+            <label data-i18n="subjectLabel">Subject</label>
+            <input name="subject" required />
+          </div>
+          <div class="field">
+            <label data-i18n="messageLabel">Message</label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="muted" style="margin:10px 0 0" data-i18n="sendNote">Note: The send button opens your default email app (no server required).</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("mailForm");
+  if (!form) return;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const n = data.get("name");
+    const subject = data.get("subject");
+    const message = data.get("message");
+    const body = encodeURIComponent(`Name: ${n}\n\nMessage:\n${message}\n\nPhone: +218-217179999`);
+    const sub = encodeURIComponent(subject);
+    window.location.href = `mailto:info@AfricaCoast.ly?subject=${sub}&body=${body}`;
+  });
+});
+</script>
+
+<footer class="footer">
+  <div class="wrap">
+    <hr class="sep" />
+    <div class="footerGrid">
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="assets/logo-text.png" alt="Logo" style="height:38px; background:#fff; padding:6px; border-radius:12px; border:1px solid rgba(15,23,42,.10);" />
+        <div>
+          <div style="font-weight:900; color:#0f172a" data-i18n="siteName">شركة ساحل أفريقيا للتأمين</div>
+          <div class="muted" style="font-size:12px">+218-217179999 · info@AfricaCoast.ly</div>
+        </div>
+      </div>
+      <div class="muted" style="font-size:12px">
+        © <span data-year></span> <span data-i18n="footerRights">All rights reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
