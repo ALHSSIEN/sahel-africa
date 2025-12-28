@@ -1,7 +1,5 @@
 (function () {
-  /* =========================
-     Language (AR / EN)
-     ========================= */
+  /* ===== Language ===== */
   const LANG_KEY = "ac_lang"; // ar | en
 
   function getLang() {
@@ -14,7 +12,6 @@
     html.lang = lang === "en" ? "en" : "ar";
     html.dir = lang === "en" ? "ltr" : "rtl";
 
-    // Apply translations
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       const val =
@@ -24,7 +21,6 @@
       if (val) el.textContent = val;
     });
 
-    // Toggle button text
     const langBtn = document.getElementById("langToggle");
     if (langBtn) langBtn.textContent = lang === "en" ? "AR" : "EN";
   }
@@ -34,9 +30,7 @@
     applyLang(lang);
   }
 
-  /* =========================
-     Theme (Light / Dark)
-     ========================= */
+  /* ===== Theme ===== */
   const THEME_KEY = "ac_theme"; // light | dark
 
   function getTheme() {
@@ -55,9 +49,7 @@
     applyTheme(theme);
   }
 
-  /* =========================
-     Hamburger Menu (Mobile)
-     ========================= */
+  /* ===== Hamburger ===== */
   function initHamburger() {
     const burger = document.getElementById("burgerBtn");
     const menu = document.getElementById("mainMenu");
@@ -67,12 +59,10 @@
       menu.classList.toggle("open");
     });
 
-    // Close menu when clicking a link
     menu.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => menu.classList.remove("open"));
     });
 
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
       if (!menu.contains(e.target) && !burger.contains(e.target)) {
         menu.classList.remove("open");
@@ -80,19 +70,13 @@
     });
   }
 
-  /* =========================
-     On Load
-     ========================= */
   document.addEventListener("DOMContentLoaded", () => {
-    // Footer year
     const y = document.querySelector("[data-year]");
     if (y) y.textContent = new Date().getFullYear();
 
-    // Apply language + theme
     applyLang(getLang());
     applyTheme(getTheme());
 
-    // Buttons
     const langBtn = document.getElementById("langToggle");
     if (langBtn) {
       langBtn.addEventListener("click", () => {
@@ -109,11 +93,6 @@
       });
     }
 
-    // Hamburger
     initHamburger();
   });
-
-  // Optional: expose
-  window.__setLang = setLang;
-  window.__setTheme = setTheme;
 })();
